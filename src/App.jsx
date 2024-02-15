@@ -5,7 +5,6 @@ import "./components/style/media.css"
 import RoutesRoute from "./routes/routes";
 import Footer from "./Footer/footer";
 
-
 function App() {
   return (
     <div className="App">

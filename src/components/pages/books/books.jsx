@@ -8,19 +8,20 @@ export default function Books() {
     const { date } = useBooks()
 
     function getRavno(){
-        typing.map((el) => { setButton(el) })
+        typing.map((el) =>  setButton(el) )
     }
-    console.log(buttons);
+    // console.log(buttons);
 
-    function getBooks() {
-
-        setGetBook(date.filter(el => el.type ===buttons ))
+    function getBooks(el) {
+        setButton(el)
+        const book = date.filter(el => el.type ===buttons )
+        setGetBook(book)
     }
 
-    console.log(buttons);
+    // console.log(buttons);
 
     // console.log(getBook);
-    useEffect(() =>  getRavno(), [])
+    useEffect(() =>  getBooks(), [])
 
     return (
         <div id="books">

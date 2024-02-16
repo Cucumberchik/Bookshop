@@ -35,9 +35,6 @@
 .mp-0{
     margin-top: 0px;
 }
-/* .w-700{
-    width: 700px;
-} */
 .MP-10{
     margin-top: 10px;
 }
@@ -367,20 +364,34 @@ animation:  searches 0.3s ease-in;
 .my_cart{
     width: 800px;
 }
+.page{
+}
 .recent_order_summ{
     width: 400px;
     h1{
         font-size: 27px;
         font-weight: 500;
-    }
-    h2{
-        font-size: 21px;
-        font-weight: 500;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-        color: #141414;
-    }
+    }}
+.order_page{
+    flex-direction: column;
+}
+.order_page_answer{
+    flex-direction: column;
+    gap: 30px;
+}
+
+.order_page_UPS{
+    width: 69%;
+    border: 2px solid #3c47ec;
+    align-items: center;
+    border-radius: 10px;
+    height: 50px;
+}
+.order_checkbox_title{
+    margin-left: 20px;
 }
 .order_summary{
+    margin-top: 30px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -389,9 +400,14 @@ animation:  searches 0.3s ease-in;
 .recent_select{
     border-radius: 10px;
     padding:0 10px;
-    border: 1px solid rgb(167, 167, 167);
+    
     h2{
-        text-align: center;
+       text-align: center;
+    }
+}
+.ratet_arrow{
+    ion-icon{
+        transform: rotate(90deg);
     }
 }
 .recent_line{
@@ -425,6 +441,8 @@ animation:  searches 0.3s ease-in;
         width: 100%;
     }
 }
+
+
 /* ==========----My Cart---======== */
 .my_carts{
     padding-top: 50px;
@@ -495,10 +513,20 @@ animation:  searches 0.3s ease-in;
         font-weight: 500;
     }
     h2{
-        font-size: 21px;
-        font-weight: 500;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-        color: #141414;
+        margin-top: 20px;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        color: #19272e;
+    }
+    p{
+        margin-top: -10px;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        color: #19272e; 
     }
 }
 .order_summary{
@@ -507,14 +535,7 @@ animation:  searches 0.3s ease-in;
     justify-content: center;
     height: 300px;
 }
-.recent_select{
-    border-radius: 10px;
-    padding:0 10px;
-    border: 1px solid rgb(167, 167, 167);
-    h2{
-        text-align: center;
-    }
-}
+
 .my_cart_line{
     height: 2px;
     width: 100%;
@@ -546,8 +567,7 @@ animation:  searches 0.3s ease-in;
         width: 100%;
     }
 }
-.carts{
-}
+
 /* ===========----Detail--======== */
 .details_head{
     padding: 40px;

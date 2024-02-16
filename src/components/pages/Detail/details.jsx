@@ -28,7 +28,6 @@ export default function Detail() {
     useEffect(() => { load() }, [])
     useEffect(() => { Geeks() }, [])
     useEffect(() => { readData() }, [])
-    let [error, setError] = useState(false)
 
     let [slices, setSlices,] = useState(true)
     let [recent, setRecent] = useState([])

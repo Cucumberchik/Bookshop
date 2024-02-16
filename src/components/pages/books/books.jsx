@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 export default function Books() {
     const { typing } = useBooks()
     const [getBook, setGetBook] = useState([])
+    const [filter, setFilter]= useState([])
     const [buttons, setButton] = useState('')
     const { date } = useBooks()
 
@@ -14,7 +15,9 @@ export default function Books() {
 
     function getBooks(el) {
         setButton(el)
-        const book = date.filter(el => el.type ===buttons )
+        let book = date.filter(el => el.type ===buttons )
+
+
         setGetBook(book)
     }
 

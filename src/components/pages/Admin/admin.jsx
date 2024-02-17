@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useBooks } from '../../../context/addBooks';
 // import { Link } from 'react-router-dom';
 import { IoIosArrowDown } from "react-icons/io";
@@ -14,6 +14,7 @@ const Admin = () => {
   const [type, setType] = useState('')
   const [types, btnTypes] = useState(false)
   const [categorie, setCotegorie] = useState(false)
+  const [status, setStatus] = useState(false)
 
   let { addBooks } = useBooks()
   function addBook() {
@@ -40,14 +41,22 @@ const Admin = () => {
       alert("error")
     }
   }
-
+  function readAdmin() {
+    let state = JSON.parse(localStorage.getItem("admin_session")) || ''
+    if (state.includes("true")) {
+      setStatus(true)
+    } else {
+      setStatus(false)
+    }
+  }
+  useEffect(() => { readAdmin() }, [])
   let number = price.replace(/[a-zA-Z]/g, '')
 
   let typing = ["Autographed Books", "Sci-Fi", "For kids", "For teenagers", "Finance", "Romantic", "Psychology", "Self-Improvement", "Educational", "Literature", "Religion"]
   return (
 
     <div id="admin">
-      <div className="container">
+      {status && <div className="container">
         <div className="admin">
           <div className="admin_input_block">
             <input type="text" onChange={(e) => { setLink(e.target.value) }} value={link} placeholder='img_book' />
@@ -57,14 +66,10 @@ const Admin = () => {
             <input type="text" onChange={(e) => { setPrice(e.target.value) }} value={number} placeholder='Price_book' />
             <div className="btns">
               <h3 onClick={() => btnTypes(!types)} className={`c-p  btnType d_f-a_c`}>Type <span className={`${types ? "rotet" : ""}`}> <IoIosArrowDown /></span></h3>
-              
+
               <div className="btn_ad">
                 <button onClick={addBook}>Add to Card</button>
-                {/* <div className="count">
-                  <button>-</button>
-                  {/* <h1>{count}</h1> */}
-                {/*<button>+</button>
-                </div> */}
+
               </div>
             </div>
             <div style={{
@@ -77,7 +82,9 @@ const Admin = () => {
 
           </div>
         </div>
-      </div>
+      </div>}
+      {!status && <img className='e404' src="https://cdni.iconscout.com/illustration/premium/thumb/404-error-5849785-4867026.png" alt="" />}
+
     </div>
 
 

@@ -8,6 +8,7 @@ import { IoIosRemove } from "react-icons/io";
 import { LiaHeartSolid } from "react-icons/lia";
 import { PiWarningCircle } from "react-icons/pi";
 import { useNavbar } from "../../../context/navbarContext";
+import { Helmet } from "react-helmet";
 export default function Detail() {
     let { errorAddBasket, setIdDerail, date, setLikeState, readData, addReceting, addBasket, likeState } = useBooks()
     let params = useParams()
@@ -90,6 +91,7 @@ export default function Detail() {
     }
     return (
         <div className="details_head d JC_c no_copy">
+            <title>Book</title>
             <div className="details d ">
                 <div className="alert_add_books d JC_s-a tr-02" style={{
                     left: errorAddBasket ? "200px" : "-430px",
@@ -103,6 +105,9 @@ export default function Detail() {
                     {data.map(el => (
 
                         el && <div className="detail d">
+                            <Helmet>
+                                <title>{el.title}</title>
+                            </Helmet>
                             <img src={el.link} alt="" />
                             <div className="detail_title">
                                 <div className="detail_title_book d">

@@ -1,29 +1,36 @@
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
+import ModalWindowAdminLogIn from "../components/Modals/modal_window_login_admin/modal_admin_wondw"
 
 const Password = JSON.parse(localStorage.getItem("admin_session")) || ''
 export default function Footer() {
+    const [modalAdmin, setModalAdmin] = useState(false)
     const [password, setPassWord] = useState('')
     const navigate = useNavigate()
     function openAdmin() {
         if (password == "admin") {
-            localStorage.setItem("admin_session", JSON.stringify("true"))
-            setPassWord("")
-            navigate("/admin")
+            setModalAdmin(true)
+            setPassWord('')
         } else {
             setPassWord('')
         }
     }
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            openAdmin()
+        }
+    };
+
     return (
         <div id="footer">
             <div className="block">
                 <div className="footer">
                     <div className="footer_register">
                         <h1>Sign up for our newsletter</h1>
-                        <p>Be the first to know about our special offers, news, and updates.</p>
+                        <p >Be the first to know about our special offers, news, and updates.</p>
                         <div className="inpt">
-                            <input value={password} onChange={(e) => setPassWord(e.target.value)} type="text" placeholder="Email Address . ." maxLength={30} />
+                            <input value={password} onChange={(e) => setPassWord(e.target.value)} onKeyPress={handleKeyPress} type="email" placeholder="Email Address . ." maxLength={30} />
                             <button onClick={openAdmin}>sing up</button>
                         </div>
                     </div>
@@ -66,6 +73,7 @@ export default function Footer() {
 
                 </div>
             </div>
-        </div>
+            <ModalWindowAdminLogIn setModalAdmin={setModalAdmin} modalAdmin={modalAdmin} />
+        </div >
     )
 }

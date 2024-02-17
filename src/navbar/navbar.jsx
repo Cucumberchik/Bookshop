@@ -5,7 +5,10 @@ import { useEffect, useState } from "react";
 import Categories from "../components/pages/categories/categories";
 import SearchList from "../components/pages/list_search/list_search";
 import { useNavbar } from "../context/navbarContext";
+import { Helmet } from "react-helmet";
 export default function Navbar() {
+    let { setTyps } = useNavbar()
+
     let navigate = useNavigate()
     let basketStora = JSON.parse(localStorage.getItem('basket')) || []
     const { categories, setCategories, basket } = useNavbar()
@@ -36,9 +39,13 @@ export default function Navbar() {
                 behavior: 'smooth'
             });
         }, 100)
+
+
+
     }
     function booksUp() {
         setCategories(false)
+        setTyps('')
         setTimeout(() => {
             window.scroll({
                 top: 0,
@@ -51,8 +58,12 @@ export default function Navbar() {
             setSearching(!searching)
         }, 10)
     }
+
     return (
         <div className="navbar ">
+            <Helmet   >
+                <title>Bookshop</title>
+            </Helmet >
             <div className="container m-b">
                 <nav className="d_f-a_c JC_s-a">
                     <div className="navbar_title d_f-a_c JC_s-b">
@@ -65,7 +76,7 @@ export default function Navbar() {
                     <div style={{
                     }} className="navbar_hug d_f-a_c JS_s-b">
                         <div className="search d ">
-                            <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} type="text" className={`${searching ? "searching" : ""}`} />
+                            {searching && <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} type="text" className={`${searching ? "searching" : ""}`} />}
                             <button onClick={() => readSearch()} className="tr-02 d_f-a_c"><IoSearch /></button>
                         </div>
                         <div className="navbar_orders d_f-a_c">

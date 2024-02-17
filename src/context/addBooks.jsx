@@ -7,14 +7,13 @@ import { wait } from "@testing-library/user-event/dist/utils";
 
 let createBooksContext = createContext()
 export const useBooks = () => useContext(createBooksContext)
-let typing = ["Autographed Books", "Sci-Fi", "For kids", "For teenagers", "Finance", "Romantic", "Psychology", "Self-Improvement", "Educational", "Literature", "Religion"]
+
 
 
 export default function AddBooksing({ children }) {
     const [date, setData] = useState([])
     const [likeState, setLikeState] = useState(false)
     const [recentStore, setRecentStore] = useState([])
-    const [idDetail, setIdDerail] = useState('')
     const [errorAddBasket, setErrorAddBasket] = useState(false)
 
 
@@ -75,8 +74,6 @@ export default function AddBooksing({ children }) {
         addBooks,
         date,
         readData,
-        setIdDerail,
-        typing
     }
     return <createBooksContext.Provider value={values}>{children}</createBooksContext.Provider>
 }

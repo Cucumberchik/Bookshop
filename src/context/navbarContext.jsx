@@ -7,10 +7,9 @@ let createNavbar = createContext()
 export const useNavbar = () => useContext(createNavbar)
 
 export default function NavbarContext({ children }) {
-    let cotegorie = ["Popular", "New books", "Profession"]
-    const [coteg, setCoteg] = useState([])
     const [basket, basketStorage] = useState(false)
     const [categories, setCategories] = useState(false)
+
 
     const [typs, setTyps] = useState('')
     const [bookData, setBookData] = useState([])
@@ -37,11 +36,7 @@ export default function NavbarContext({ children }) {
     }, [data, typs]);
     useEffect(() => { readBook() }, [typs]);
 
-    async function getCateg() {
-        cotegorie.map(el => (
-            setCoteg(el)
-        ))
-    }
+
     useEffect(() => { readData() }, [])
     let values = {
         setSlices,
@@ -51,9 +46,7 @@ export default function NavbarContext({ children }) {
         bookData,
         basket,
         basketStorage,
-        getCateg,
         data,
-        cotegorie,
         categories,
         setCategories
     }

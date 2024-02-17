@@ -48,6 +48,10 @@ export default function AddBooksing({ children }) {
         data = data.filter(el => el.id !== id);
         localStorage.setItem("basket", JSON.stringify(data));
     }
+    async function removeMyRecent(id) {
+        data = data.filter(el => el.id !== id);
+        localStorage.setItem("recent", JSON.stringify(data));
+    }
 
     async function addBasket(obj) {
         if (!basket.find(el => el.id == obj.id)) {
@@ -74,6 +78,7 @@ export default function AddBooksing({ children }) {
         addBooks,
         date,
         readData,
+        removeMyRecent
     }
     return <createBooksContext.Provider value={values}>{children}</createBooksContext.Provider>
 }

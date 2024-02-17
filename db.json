@@ -317,6 +317,56 @@
       "price": "549",
       "type": "Autographed Books",
       "categorie": ""
+    },
+    {
+      "id": "c9ad",
+      "link": "https://i3.mybook.io/p/x378/book_covers/c7/b1/c7b1406c-d5a1-4762-b37a-67b25bdaca8a.jpg",
+      "title": "Мастер и Маргарита",
+      "by": "Михаил Булгаков",
+      "description": "«Мастер и Маргарита» — это роман, который стоит особняком от остальных книг, изданных в советский период. Параллельно в книге развиваются несколько сюжетных линий, а реальное смешивается с фантастическим и мистическим. Книга предлагает нам исследовать разные временные периоды, а также забраться в самые потаенные уголки человеческой души. Действие романа начинается в мае, когда Берлиоз, председатель правления МАССОЛИТа, и поэт Бездомный встречают на Патриарших прудах загадочную персону. Кажется, что он знает и прошлое, и будущее. Перед героями сам дьявол, который назвался Воландом, прибыл в столицу со своей разношерстной свитой и поселился в «нехорошей квартире».  В процессе общения Бездомный сходит с ума, попадает в психиатрическую лечебницу и знакомится там с Мастером. Он узнает о романе, посвященном Понтию Пилату, а также о тайной жене Мастера — Маргарите, которая уже готова заложить душу дьяволу, лишь бы узнать, где ее любимый. Ее желание, конечно, не остается неуслышанным.",
+      "price": "229",
+      "type": "Romantic",
+      "categorie": false
+    },
+    {
+      "id": "405c",
+      "link": "https://i1.mybook.io/p/x378/book_covers/cb/77/cb7790e7-0d16-459b-a951-c20a16e4e5e1.jpg",
+      "title": "Посмотри, отвернись, посмотри",
+      "by": "Елена Михалкова",
+      "description": "Полина Журавлева и Александра Нечаева живут в параллельных мирах. Одна – москвичка, любимица своих близких. Другая – провинциалка, ребенок из неблагополучной семьи, не сохранившая ни друзей, ни привязанностей.  Но точка пересечения этих миров – жестокое убийство, погружающее в темные и страшные тайны.  Если что-то на первый взгляд кажется тебе милым, ясным и привлекательным, остановись. Отвернись. Посмотри ещё раз. Вглядись пристально. Прислушайся к своей интуиции. Если она кричит: «Спасайся!» – не жди, пока на помощь придут частные детективы Макар Илюшин и Сергей Бабкин.  Они могут не успеть.",
+      "price": "549",
+      "type": "Educational",
+      "categorie": ""
+    },
+    {
+      "id": "d474",
+      "link": "https://bookoutlet.ca/_next/image?url=https%3A%2F%2Fimages.bookoutlet.com%2Fcovers%2Flarge%2Fisbn978153%2F9781534441613-l.jpg&w=640&q=75",
+      "title": "Legendborn (The Legendborn Cycle, Bk. 1)",
+      "by": "Deonn, Tracy",
+      "description": "After her mother dies in an accident, sixteen-year-old Bree Matthews wants nothing to do with her family memories or childhood home. A residential program for bright high schoolers at UNC–Chapel Hill seems like the perfect escape—until Bree witnesses a magical attack her very first night on campus.  A flying demon feeding on human energies.  A secret society of so called “Legendborn” students that hunt the creatures down.  And a mysterious teenage mage who calls himself a “Merlin” and who attempts—and fails—to wipe Bree’s memory of everything she saw.  The mage’s failure unlocks Bree’s own unique magic and a buried memory with a hidden connection: the night her mother died, another Merlin was at the hospital. Now that Bree knows there’s more to her mother’s death than what’s on the police report, she’ll do whatever it takes to find out the truth, even if that means infiltrating the Legendborn as one of their initiates.  She recruits Nick, a self-exiled Legendborn with his own grudge against the group, and their reluctant partnership pulls them deeper into the society’s secrets—and closer to each other. But when the Legendborn reveal themselves as the descendants of King Arthur’s knights and explain that a magical war is coming, Bree has to decide how far she’ll go for the truth and whether she should use her magic to take the society down—or join the fight.",
+      "price": "542",
+      "type": "Autographed Books",
+      "categorie": ""
+    },
+    {
+      "id": "3416",
+      "link": "https://bookoutlet.ca/_next/image?url=https%3A%2F%2Fimages.bookoutlet.com%2Fcovers%2Flarge%2Fisbn978006%2F9780063216211-l.jpg&w=640&q=75",
+      "title": "Easter Crack-Ups: Knock-Knock Jokes Funny-Side Up (The Lift-The-Flap Joke Books)",
+      "by": "Hall, Katy",
+      "description": "Celebrate Easter with over two dozen knock-knock  jokes that will crack up the whole family. Hop along with bunnies and kids to enjoy an egg hunt, a parade, and more. Lift the flaps to reveal punch lines!",
+      "price": "326",
+      "type": "For kids",
+      "categorie": ""
+    },
+    {
+      "id": "9e16",
+      "link": "https://img.thriftbooks.com/api/images/i/xl/635AF181E0263398554598F672F8BFA697AB390C.jpg",
+      "title": "Random in Death: An Eve Dallas Novel",
+      "by": "J.D. Robb",
+      "description": "Jenna's parents had finally given in, and there she was, at a New York club with her best friends, watching the legendary band Avenue A, carrying her demo in hopes of slipping it to the guitarist, Jake Kincade. Then, from the stage, Jake catches her eye, and smiles. It's the best night of her life. It's the last night of her life. Minutes later, Jake's in the alley getting some fresh air, and the girl from the dance floor comes stumbling out, sick and confused and deathly pale. He tries to help, but it's no use. He doesn't know that someone in the crowd has jabbed her with a needle--and when his girlfriend Nadine arrives, she knows the only thing left to do for the girl is call her friend, Lieutenant Eve Dallas.",
+      "price": "1289",
+      "type": "Romantic",
+      "categorie": false
     }
   ]
 }

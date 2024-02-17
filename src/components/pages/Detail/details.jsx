@@ -10,11 +10,10 @@ import { PiWarningCircle } from "react-icons/pi";
 import { useNavbar } from "../../../context/navbarContext";
 import { Helmet } from "react-helmet";
 export default function Detail() {
-    let { errorAddBasket, setIdDerail, date, setLikeState, readData, addReceting, addBasket, likeState } = useBooks()
+    let { errorAddBasket, date, setLikeState, readData, addReceting, addBasket, likeState } = useBooks()
     let params = useParams()
     let { basketStorage } = useNavbar()
 
-    useEffect(() => { setIdDerail(params) }, [])
     let data = [date.find(el => el.id == params.id)]
     function Geeks() {
         window.scroll({

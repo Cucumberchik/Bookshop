@@ -18,7 +18,7 @@ export default function HomeBooks() {
                                 <img src={el.link} alt="" />
                             </div>
                             <div className="home_book_title">
-                                <h2>{el.title.slice(0, 20)}...</h2>
+                                <h2>{el.title.length > 35 ? el.title.slice(0, 35) + "..." : el.title}</h2>
                                 <p> {el.by}</p>
                             </div>
                         </div>
